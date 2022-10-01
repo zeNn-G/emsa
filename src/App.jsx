@@ -1,9 +1,26 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+
+import { urlFor, client } from "./sanityConfig";
 
 const App = () => {
+  const [stores, setStores] = useState([]);
+
+  useEffect(() => {
+    const query = '*[_type == "stores"]';
+
+    client.fetch(query).then((data) => setStores(data));
+  }, []);
+
   return (
     <div>
-      <h1>App</h1>
+      {stores.map((store) => {
+        return (
+          <>
+            <div key={store._id}>{store.description}</div>
+            <img src={urlFor(store.imageurl).url()} />
+          </>
+        );
+      })}
     </div>
   );
 };
