@@ -15,21 +15,19 @@ const Card = ({ stores }) => {
                   src={urlFor(store.imageurl).url()}
                 />
               </div>
-              <div className="p-2">
-                <h2 className="name">{store.name}</h2>
-                <p className="desctription">{store.description}</p>
-
-                <div className="flex justify-between  flex-row">
-                  <div className="items-center">
-                    <h3 className="p-4 bg-blue-200 justify-start inline-block  rounded-xl">
-                      {store.district}
-                    </h3>
-                    <button className="ml-4">
-                      {/* {store.address} */}
-                      adress
-                    </button>
+              <div className="flex w-full p-2 flex-col">
+                <div className="w-full bg-red-200 h-[180px]">
+                  <h2 className="">{store.name}</h2>
+                  <p className="">{store.description}</p>
+                </div>
+                <div className="flex bg-blue-200 justify-around">
+                  <div className="flex-[4] flex ">
+                    <div>A</div>
+                    <div>B</div>
                   </div>
-                  <div className="mt-4 end ">{store.discount}</div>
+                  <div className="flex-[2] bg-red-400 flex items-center justify-end">
+                    <div className="">C</div>
+                  </div>
                 </div>
               </div>
             </div>

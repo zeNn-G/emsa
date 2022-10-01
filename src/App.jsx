@@ -30,9 +30,7 @@ const App = () => {
         <input type="text" onChange={(e) => setSearch(e.target.value)} />
       </div>
       <div className=" w-[80%] mt-[100px] bg-red-400">
-        <div className="flex justify-start items-start">
-          <Card stores={stores} />
-        </div>
+        <Card stores={stores} />
       </div>
     </div>
   );
