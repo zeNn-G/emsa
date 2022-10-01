@@ -1,33 +1,21 @@
 import React, { useEffect, useState } from "react";
 
-import { urlFor, client } from "../sanityConfig";
+import { urlFor } from "../sanityConfig";
 
-const Card = () => {
-  const [stores, setStores] = useState([]);
-
-  useEffect(() => {
-    const query = '*[_type == "stores"]';
-
-    client.fetch(query).then((data) => setStores(data));
-  }, []);
-
+const Card = ({ stores }) => {
   return (
     <div>
       {stores.map((store) => {
         return (
-          <div className="">
+          <div className="" key={store._id}>
             <div className="">
               <div className="">
                 <img src={urlFor(store.imageurl).url()} />
               </div>
               <div className="">
                 <div className="">
-                  <div className="" key={store._id}>
-                    {store.name}
-                  </div>
-                  <div className="" key={store._id}>
-                    {store.description}
-                  </div>
+                  <div className="">{store.name}</div>
+                  <div className="">{store.description}</div>
                 </div>
               </div>
             </div>
