@@ -15,10 +15,23 @@ const Card = () => {
     <div>
       {stores.map((store) => {
         return (
-          <>
-            <div key={store._id}>{store.description}</div>
-            <img src={urlFor(store.imageurl).url()} />
-          </>
+          <div className="">
+            <div className="">
+              <div className="">
+                <img src={urlFor(store.imageurl).url()} />
+              </div>
+              <div className="">
+                <div className="">
+                  <div className="" key={store._id}>
+                    {store.name}
+                  </div>
+                  <div className="" key={store._id}>
+                    {store.description}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         );
       })}
     </div>
