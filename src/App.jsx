@@ -7,34 +7,39 @@ import { client } from "./sanityConfig";
 
 const App = () => {
   const [stores, setStores] = useState([]);
-  const [origStores, setOrigStores] = useState([]);
+  const [originalStores, setOriginalStores] = useState([]);
+  const [isFound, setIsFound] = useState(false);
   const [search, setSearch] = useState("");
 
   useEffect(() => {
     const query = '*[_type == "stores"]';
-    client.fetch(query).then((data) => setOrigStores(data));
-
-    setStores(origStores);
-
-    console.log(stores);
+    client.fetch(query).then((data) => {
+      setStores(data);
+      setOriginalStores(data);
+    });
   }, []);
+
+  const results = stores.filter((store) =>
+    store.name.toLowerCase().includes(search.toLowerCase())
+  );
 
   useEffect(() => {
     if (search.length > 0) {
-      const filteredStores = stores.filter((store) => {
-        return store.name.toLowerCase().includes(search.toLowerCase());
-      });
+      // const filteredStores = stores.filter((store) => {
+      //   store.name.toLowerCase().includes(search.toLowerCase());
+      // });
 
-      if (filteredStores.length > 0) {
-        setStores(filteredStores);
+      if (results.length > 0) {
+        setStores(results);
+        setIsFound(false);
       } else {
-        const query = '*[_type == "stores"]';
-        client.fetch(query).then((data) => setStores(data));
+        setIsFound(true);
       }
 
-      setStores(filteredStores);
+      console.log(results);
+      console.log(isFound);
     } else {
-      setStores(stores);
+      setStores(originalStores);
     }
   }, [search]);
 
@@ -45,7 +50,7 @@ const App = () => {
         <input type="text" onChange={(e) => setSearch(e.target.value)} />
       </div>
       <div className=" w-[80%] mt-[100px] bg-red-400">
-        <Card stores={stores} />
+        {!isFound ? <Card stores={stores} /> : null}
       </div>
     </div>
   );
