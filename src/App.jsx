@@ -16,6 +16,7 @@ const App = () => {
     client.fetch(query).then((data) => {
       setStores(data);
       setOriginalStores(data);
+      setIsFound(true);
     });
   }, []);
 
