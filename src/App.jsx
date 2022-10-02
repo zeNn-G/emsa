@@ -7,20 +7,35 @@ import { client } from "./sanityConfig";
 
 const App = () => {
   const [stores, setStores] = useState([]);
+  const [origStores, setOrigStores] = useState([]);
   const [search, setSearch] = useState("");
 
   useEffect(() => {
     const query = '*[_type == "stores"]';
-    client.fetch(query).then((data) => setStores(data));
+    client.fetch(query).then((data) => setOrigStores(data));
+
+    setStores(origStores);
+
+    console.log(stores);
   }, []);
 
   useEffect(() => {
-    //Filter the stores based on the search input
+    if (search.length > 0) {
+      const filteredStores = stores.filter((store) => {
+        return store.name.toLowerCase().includes(search.toLowerCase());
+      });
 
-    const results = stores.filter((store) =>
-      store.name.toLowerCase().includes(search)
-    );
-    setStores(results);
+      if (filteredStores.length > 0) {
+        setStores(filteredStores);
+      } else {
+        const query = '*[_type == "stores"]';
+        client.fetch(query).then((data) => setStores(data));
+      }
+
+      setStores(filteredStores);
+    } else {
+      setStores(stores);
+    }
   }, [search]);
 
   return (
