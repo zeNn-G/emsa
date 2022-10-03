@@ -4,30 +4,35 @@ import Card from "./components/Card";
 import Logo from "./assets/EmsaGazi.webp";
 
 import { client } from "./sanityConfig";
+import { data } from "./data";
 
 const App = () => {
   const [stores, setStores] = useState([]);
   const [originalStores, setOriginalStores] = useState([]);
-  const [isFound, setIsFound] = useState(false);
+  const [isFound, setIsFound] = useState(true);
   const [search, setSearch] = useState("");
 
+  // useEffect(() => {
+  //   const query = '*[_type == "stores"]';
+  //   client.fetch(query).then((data) => {
+  //     setStores(data);
+  //     setOriginalStores(data);
+  //     setIsFound(true);
+  //   });
+  // }, []);
+
   useEffect(() => {
-    const query = '*[_type == "stores"]';
-    client.fetch(query).then((data) => {
-      setStores(data);
-      setOriginalStores(data);
-      setIsFound(true);
-    });
+    setStores(data);
   }, []);
 
-  const handleSearch = (e) => {
-    setSearch(e.target.value);
-    const filteredStores = originalStores.filter((store) => {
-      return store.name.toLowerCase().includes(e.target.value.toLowerCase());
-    });
-    setStores(filteredStores);
-    setIsFound(filteredStores.length > 0);
-  };
+  // const handleSearch = (e) => {
+  //   setSearch(e.target.value);
+  //   const filteredStores = originalStores.filter((store) => {
+  //     return store.name.toLowerCase().includes(e.target.value.toLowerCase());
+  //   });
+  //   setStores(filteredStores);
+  //   setIsFound(filteredStores.length > 0);
+  // };
 
   return (
     <div className="bg-primary flex flex-col justify-center items-center">
