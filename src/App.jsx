@@ -37,9 +37,9 @@ const App = () => {
 
   return (
     <div className="bg-primary flex flex-col justify-center items-center">
-      <div className="flex md:flex-row flex-col w-[80%] mt-[100px] justify-center">
+      <div className="flex md:flex-row flex-col w-[90%] mt-[100px] justify-center">
         <img src={Logo} alt="Emsa Gazi Logo" className="object-cover" />
-        <div className="flex-row items-center space-x-2 pb-2 mx-4 md:w-[500px] mt-[20px] md:mt-0 ">
+        <div className="flex-row items-center space-x-2 pb-2 sm:mx-4 md:w-[500px] mt-[20px] md:mt-0 ">
           <div className="flex flex-row flex-1 space-x-2 bg-gray-200 p-3 rounded-xl mt-[8px]">
             <MagnifyingGlassIcon className="w-[24px] h-[24px] " />
             <input

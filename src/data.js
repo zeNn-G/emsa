@@ -46,7 +46,8 @@ export const data = [
     _type: "stores",
     _updatedAt: "2022-10-02T09:34:14Z",
     address: "asd",
-    description: "test",
+    description:
+      "testtesttesttest testtesttesttesttesttestte sttesttesttesttesttesttesttes ttesttesttesttesttesttesttest",
     discount: 21,
     district: "das",
     imageurl: {
