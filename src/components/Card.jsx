@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 
 import { urlFor } from "../sanityConfig";
 
+import Map from "../assets/map.png";
+
 const Card = ({ stores }) => {
   return (
     <div className="flex-wrap relative md:flex  justify-center">
@@ -23,7 +25,11 @@ const Card = ({ stores }) => {
                 <div className="flex justify-around ">
                   <div className="flex ">
                     <div className=" p-2">{store.district}</div>
-                    <button className=" p-2">Icon</button>
+                    <button className=" p-2">
+                      <a href={store.address} target="_blank">
+                        <img src={Map} className="h-[32px] w-[32px]" />
+                      </a>
+                    </button>
                   </div>
                   <div className="flex-[2] flex items-center justify-end">
                     <div className="">{store.discount} %</div>
