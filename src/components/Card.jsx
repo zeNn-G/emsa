@@ -6,11 +6,11 @@ import Map from "../assets/map.png";
 
 const Card = ({ stores }) => {
   return (
-    <div className="flex-wrap relative md:flex  justify-center">
+    <div className="flex-wrap relative md:flex justify-center">
       {stores.map((store) => {
         return (
           <div className="flex-row flex mt-10 justify-center items-center text-white gap-8">
-            <div className="backdrop-blur-sm  ml-0 mr-0 md:ml-5 md:mr-5  shadow-xl rounded-xl shadow-black sm:flex hover:scale-110">
+            <div className="backdrop-blur-sm  ml-0 mr-0 md:ml-5 md:mr-5  shadow-xl rounded-xl shadow-black sm:flex hover:scale-105">
               <div className="overflow-hidden text-center">
                 <img
                   className="md:w-[350px] w-[350px] h-[300px] md:h[350px] object-fit"
