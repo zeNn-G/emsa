@@ -22,11 +22,11 @@ const Card = ({ stores }) => {
                 </div>
                 <div className="flex bg-blue-200 justify-around">
                   <div className="flex-[4] flex ">
-                    <div>A</div>
-                    <div>B</div>
+                    <div>{store.district}</div>
+                    <a href={store.address}>Link</a>
                   </div>
                   <div className="flex-[2] bg-red-400 flex items-center justify-end">
-                    <div className="">C</div>
+                    <div className="">{store.discount}</div>
                   </div>
                 </div>
               </div>
