@@ -11,22 +11,22 @@ const Card = ({ stores }) => {
             <div className="bg-black/30 backdrop-blur-sm w-[400px] h-[250px] shadow-xl rounded-xl shadow-black flex flex-row hover:scale-110">
               <div className="overflow-hidden text-center">
                 <img
-                  className="w-[500px] h-[250px]"
+                  className="w-[500px] h-[250px] object-cover"
                   src={urlFor(store.imageurl).url()}
                 />
               </div>
-              <div className="flex w-full p-2 flex-col">
-                <div className="text-2xl mb-4">
+              <div className="flex w-full p-2 flex-col bg-slate-500">
+                <div className="text-2xl mb-4 flex-[3]">
                   <div className="border-b-2">{store.name}</div>
+                  <div className="text-xl">{store.description}</div>
                 </div>
-                <div className="text-xl">{store.description}</div>
-                <div className="flex justify-around align-bottom">
+                <div className="flex justify-around bg-purple-600 flex-[1]">
                   <div className="flex ">
-                    <div className=" p-2">A</div>
-                    <div className=" p-2">B</div>
+                    <div className=" p-2">{store.district}</div>
+                    <div className=" p-2">Icon</div>
                   </div>
                   <div className="flex-[2] flex items-center justify-end">
-                    <div className="">C</div>
+                    <div className="">{store.discount} %</div>
                   </div>
                 </div>
               </div>
