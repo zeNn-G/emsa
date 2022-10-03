@@ -40,8 +40,8 @@ const App = () => {
       <div className="flex md:flex-row flex-col w-[90%] mt-[100px] justify-center">
         <img src={Logo} alt="Emsa Gazi Logo" className="object-cover" />
         <div className="flex-row items-center space-x-2 pb-2 sm:mx-4 md:w-[500px] mt-[20px] md:mt-0 ">
-          <div className="flex flex-row flex-1 space-x-2 bg-gray-200 p-3 rounded-xl mt-[8px]">
-            <MagnifyingGlassIcon className="w-[24px] h-[24px] border-r" />
+          <div className="flex flex-row flex-1 space-x-2 bg-gray-300 p-3 rounded-xl mt-[8px]">
+            <MagnifyingGlassIcon className="w-[24px] h-[24px]" />
             <input
               type="search"
               name="search"
@@ -49,7 +49,7 @@ const App = () => {
               onInput={(e) => {
                 handleSearch(e);
               }}
-              className="bg-transparent outline-none w-full text-black placeholder-gray-500"
+              className="bg-transparent outline-none w-full text-black placeholder-gray-600 "
             />
           </div>
         </div>
