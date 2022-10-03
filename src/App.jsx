@@ -40,6 +40,7 @@ const App = () => {
           }}
         />
       </div>
+
       <div className=" w-[80%] mt-[100px] bg-red-400">
         {isFound ? <Card stores={stores} /> : null}
       </div>
