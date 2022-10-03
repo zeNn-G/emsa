@@ -52,7 +52,7 @@ export const data = [
     imageurl: {
       _type: "image",
       asset: {
-        _ref: "image-61c6ffcb2ba3220f2e9de9135ddfe20609807a5d-1912x1074-jpg",
+        _ref: "image-d4207338451d9176abccefaf56501b4921fe7678-512x512-jpg",
         _type: "reference",
       },
     },
