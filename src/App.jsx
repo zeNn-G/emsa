@@ -55,7 +55,7 @@ const App = () => {
         </div>
       </div>
 
-      <div className=" w-[80%] mt-[40px]">
+      <div className=" w-[90%] mt-[40px]">
         {isFound ? <Card stores={stores} /> : null}
       </div>
     </div>
