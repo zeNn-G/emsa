@@ -11,7 +11,7 @@ const Card = ({ stores }) => {
             <div className="backdrop-blur-sm  ml-0 mr-0 md:ml-5 md:mr-5  shadow-xl rounded-xl shadow-black sm:flex hover:scale-110">
               <div className="overflow-hidden text-center">
                 <img
-                  className="md:w-[350px] w-[250px] h-[250px] md:h[350px] object-fit"
+                  className="md:w-[350px] w-[250px] h-[250px] md:h[350px] object-cover"
                   src={urlFor(store.imageurl).url()}
                 />
               </div>
