@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 
 import { urlFor } from "../sanityConfig";
 import { MapIcon, PencilSquareIcon } from "@heroicons/react/24/outline";
+import { Link } from "react-router-dom";
 
 // import Map from "../assets/map.png";
 
@@ -43,9 +44,12 @@ const Card = ({ stores }) => {
                         {/* <img src={Mapicon} className="h-[32px] w-[32px]" /> */}
                       </a>
                       <div className="ml-1 cursor-pointer">
-                        <a href={store.formimage} target="_blank">
+                        <Link
+                          to={`/sozlesmeler/:${store.name}`}
+                          state={store.formimage}
+                        >
                           <PencilSquareIcon className="h-6 w-6 text-purpleAccent" />
-                        </a>
+                        </Link>
                       </div>
                     </div>
                     <div className="">
