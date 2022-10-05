@@ -6,7 +6,7 @@ const Contract = () => {
 
   return (
     <div className="bg-primary flex justify-center items-center w-[100vw] h-[100vh]">
-      <h1>{state}</h1>
+      <img src={state} className="object-cover" />
     </div>
   );
 };
