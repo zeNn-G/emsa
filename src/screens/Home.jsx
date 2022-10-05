@@ -28,15 +28,7 @@ const Home = () => {
   }, [data]);
   if (isLoading) return <h1 className="text-white">Loading...</h1>;
 
-  // useEffect(() => {
-  //   const query = '*[_type == "stores"]';
-  //   client.fetch(query).then((data) => {
-  //     setStores(data);
-  //     setOriginalStores(data);
-  //     setIsFound(true);
-  //   });
-  // }, []);
-
+  //! Debug With Data
   // useEffect(() => {
   //   setStores(data);
   //   setOriginalStores(data);
