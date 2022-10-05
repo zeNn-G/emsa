@@ -18,7 +18,8 @@ export const data = [
       },
     },
     name: "Hmbrgr",
-    formimage: "hmbgr sozlesme",
+    formimage:
+      "https://images.pexels.com/photos/13623493/pexels-photo-13623493.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
   },
   {
     _createdAt: "2022-09-30T21:01:21Z",
