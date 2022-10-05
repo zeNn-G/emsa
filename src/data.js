@@ -18,7 +18,7 @@ export const data = [
       },
     },
     name: "Hmbrgr",
-    formimage:
+    contracturl:
       "https://images.pexels.com/photos/13623493/pexels-photo-13623493.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
   },
   {
@@ -40,7 +40,7 @@ export const data = [
       },
     },
     name: "Barikat 7. Cadde",
-    formimage: "barikat sozlesme",
+    contracturl: "barikat sozlesme",
   },
   {
     _createdAt: "2022-10-02T09:33:28Z",
@@ -60,7 +60,7 @@ export const data = [
       },
     },
     name: "Pizzb",
-    formimage: "pizzb sozlesme",
+    contracturl: "pizzb sozlesme",
   },
   {
     _createdAt: "2022-09-30T20:56:54Z",
@@ -81,7 +81,7 @@ export const data = [
       },
     },
     name: "Pizza Il Forno",
-    formimage: "pizzailforno sozlesme",
+    contracturl: "pizzailforno sozlesme",
   },
   {
     _createdAt: "2022-10-02T12:59:10Z",
@@ -102,7 +102,7 @@ export const data = [
       },
     },
     name: "Kajun Bring More",
-    formimage: "kajun sozlesme",
+    contracturl: "kajun sozlesme",
   },
   {
     _createdAt: "2022-10-02T12:59:10Z",
@@ -123,6 +123,6 @@ export const data = [
       },
     },
     name: "Kajun Bring More",
-    formimage: "kajun sozlesme",
+    contracturl: "kajun sozlesme",
   },
 ];

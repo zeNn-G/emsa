@@ -5,13 +5,27 @@ import Logo from "../assets/EmsaGazi.webp";
 
 import { client } from "../sanityConfig";
 import { data } from "../data";
+import { useQuery } from "react-query";
 import { MagnifyingGlassIcon } from "@heroicons/react/24/solid";
 
 const Home = () => {
   const [stores, setStores] = useState([]);
   const [originalStores, setOriginalStores] = useState([]);
-  const [isFound, setIsFound] = useState(true);
-  const [search, setSearch] = useState("");
+  const [isFound, setIsFound] = useState(false);
+
+  const { isLoading, error, data } = useQuery("stores", () => {
+    const query = '*[_type == "stores"]';
+
+    return client.fetch(query);
+  });
+
+  useEffect(() => {
+    if (data) {
+      console.log(data);
+      setStores(data);
+      setOriginalStores(data);
+    }
+  }, [data]);
 
   // useEffect(() => {
   //   const query = '*[_type == "stores"]';
@@ -22,18 +36,20 @@ const Home = () => {
   //   });
   // }, []);
 
-  useEffect(() => {
-    setStores(data);
-  }, []);
+  // useEffect(() => {
+  //   setStores(data);
+  //   setOriginalStores(data);
+  //   setIsFound(true);
+  // }, []);
 
-  // const handleSearch = (e) => {
-  //   setSearch(e.target.value);
-  //   const filteredStores = originalStores.filter((store) => {
-  //     return store.name.toLowerCase().includes(e.target.value.toLowerCase());
-  //   });
-  //   setStores(filteredStores);
-  //   setIsFound(filteredStores.length > 0);
-  // };
+  const handleSearch = (e) => {
+    const filteredStores = originalStores.filter((store) => {
+      return store.name.toLowerCase().includes(e.target.value.toLowerCase());
+    });
+
+    setStores(filteredStores);
+    setIsFound(filteredStores.length > 0);
+  };
 
   return (
     <div className="relative">

@@ -36,5 +36,13 @@ export default {
         hotspot: true,
       },
     },
+    {
+      name: "contracturl",
+      title: "Sözleşme",
+      type: "image",
+      options: {
+        hotspot: true,
+      },
+    },
   ],
 };

@@ -1,14 +1,12 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 
 import { urlFor } from "../sanityConfig";
 import { MapIcon, PencilSquareIcon } from "@heroicons/react/24/outline";
 import { Link } from "react-router-dom";
 
-// import Map from "../assets/map.png";
-
 const Card = ({ stores }) => {
   return (
-    <section className="flex-wrap absolute  flex justify-center text-center align-middle">
+    <section className="flex-wrap absolute flex justify-center text-center align-middle w-[100vw] ">
       {stores.map((store) => {
         return (
           <section
@@ -46,7 +44,7 @@ const Card = ({ stores }) => {
                       <div className="ml-1 cursor-pointer">
                         <Link
                           to={`/sozlesmeler/:${store.name}`}
-                          state={store.formimage}
+                          state={store.contracturl}
                         >
                           <PencilSquareIcon className="h-6 w-6 text-purpleAccent" />
                         </Link>
