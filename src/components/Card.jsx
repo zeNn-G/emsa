@@ -16,8 +16,8 @@ const Card = ({ stores }) => {
           >
             <div
               className="flex md:flex-row flex-col backdrop-blur-sm ml-2 mr-2 md:ml-5 md:mr-5 shadow-lg rounded-xl shadow-purpleAccent
-            max-w-[220px] md:max-w-[490px]
-            max-h-[400px] md:max-h-[200px] "
+            max-w-[220px] md:max-w-[550px]
+            max-h-[400px] md:max-h-[250px] "
             >
               <div className="flex overflow-hidden text-center  md:rounded-none  rounded-sm bg-slate-700 md:rounded-l-xl  md:w-[500px]">
                 <img
@@ -30,7 +30,7 @@ const Card = ({ stores }) => {
                   <h1 className="border-b-2 p-2 border-purpleAccent text-center font-semibold">
                     {store.name}
                   </h1>
-                  <h1 className="text-xl text-center mt-2">
+                  <h1 className="text-xl  text-center mt-2">
                     {store.description}
                   </h1>
                 </div>
