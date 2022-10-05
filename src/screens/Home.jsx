@@ -36,9 +36,9 @@ const Home = () => {
   // };
 
   return (
-    <>
+    <div className="relative">
       <div className="bg-primary flex flex-col justify-center items-center">
-        <div className="flex md:flex-row flex-col w-[90%] mt-[100px] justify-center">
+        <div className="flex md:flex-row flex-col md:mt-[100px] mt-[60px] justify-center">
           <img src={Logo} alt="Emsa Gazi Logo" className="object-cover" />
           <div className="flex-row items-center space-x-2 pb-2 sm:mx-4 md:w-[500px] mt-[20px] md:mt-0 ">
             <div className="flex flex-row flex-1 space-x-2 bg-gray-300 p-3 rounded-xl mt-[8px]">
@@ -55,11 +55,11 @@ const Home = () => {
             </div>
           </div>
         </div>
-        <div className=" w-[90%] mt-[40px]">
-          {isFound ? <Card stores={stores} /> : null}
-        </div>
       </div>
-    </>
+      <div className="mt-[40px]">
+        {isFound ? <Card stores={stores} /> : null}
+      </div>
+    </div>
   );
 };
 
