@@ -17,7 +17,7 @@ const Card = ({ stores }) => {
           >
             <div
               className="flex md:flex-row flex-col backdrop-blur-sm ml-2 mr-2 md:ml-5 md:mr-5 shadow-lg rounded-xl shadow-purpleAccent
-            sm:max-w-[200px] md:max-w-[550px] max-w-[500px]
+            sm:max-w-[240px] md:max-w-[550px] max-w-[500px]
             max-h-[350px] md:max-h-[250px] "
             >
               <div className="flex overflow-hidden text-center  md:rounded-none  rounded-sm bg-slate-700 md:rounded-l-xl md:w-[600px]">
