@@ -12,7 +12,9 @@ dist
 dist-ssr
 *.local
 
+emsaback
 .env
+
 
 # Editor directories and files
 .vscode/*
