@@ -21,11 +21,12 @@ const Home = () => {
 
   useEffect(() => {
     if (data) {
-      console.log(data);
       setStores(data);
       setOriginalStores(data);
+      setIsFound(true);
     }
   }, [data]);
+  if (isLoading) return <h1 className="text-white">Loading...</h1>;
 
   // useEffect(() => {
   //   const query = '*[_type == "stores"]';
