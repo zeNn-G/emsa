@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Card from "../components/Card";
+import Spinner from "../components/Spinner";
 
 import Logo from "../assets/EmsaGazi.webp";
 
@@ -26,7 +27,12 @@ const Home = () => {
       setIsFound(true);
     }
   }, [data]);
-  if (isLoading) return <h1 className="text-white">Loading...</h1>;
+  if (isLoading)
+    return (
+      <div className="flex text-center mt-[200px] items-center content-center justify-center">
+        <Spinner />
+      </div>
+    );
 
   //! Debug With Data
   // useEffect(() => {
