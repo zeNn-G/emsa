@@ -6,23 +6,28 @@ import Map from "../assets/map.png";
 
 const Card = ({ stores }) => {
   return (
-    <div className="flex-wrap relative md:flex justify-center">
+    <section className="flex-wrap relative md:flex justify-center">
       {stores.map((store) => {
         return (
-          <div className="flex-row flex mt-10 justify-center items-center text-white gap-8 ">
-            <div className="backdrop-blur-sm  ml-0 mr-0 md:ml-5 md:mr-5 shadow-xl rounded-xl shadow-black sm:flex ">
-              <div className="overflow-hidden text-center rounded-l-xl">
+          <section
+            className="flex-row flex mt-10 justify-center items-center text-white gap-8 "
+            key={store._id}
+          >
+            <div className="flex backdrop-blur-sm  ml-0 mr-0 md:ml-5 md:mr-5 shadow-lg rounded-xl shadow-purpleAccent max-w-[500px] min-w-[400px] max-h-[200px]">
+              <div className="flex overflow-hidden text-center rounded-l-xl justify-center items-center w-[500px]">
                 <img
-                  className="md:w-[350px] w-[350px] h-[300px] md:h[350px] object-cover"
+                  className="md:w-[250px] w-[250px] h-[200px] md:h[250px] object-cover"
                   src={urlFor(store.imageurl).url()}
                 />
               </div>
-              <div className="flex sm:w-[250px] max-w-[350px] h-auto p-2 flex-col bg-slate-700 rounded-r-xl">
+              <div className="flex p-2 flex-col bg-slate-700 rounded-r-xl w-full">
                 <div className="text-2xl mb-4 flex-[1] md:flex-[3]">
-                  <div className="border-b-2 p-2 border-purpleAccent text-center">
+                  <h1 className="border-b-2 p-2 border-purpleAccent text-center font-semibold">
                     {store.name}
-                  </div>
-                  <div className="text-xl mt-4 flex ">{store.description}</div>
+                  </h1>
+                  <h1 className="text-xl text-center mt-2">
+                    {store.description}
+                  </h1>
                 </div>
                 <div className="flex border-t-2 border-purpleAccent">
                   <div className="flex items-center gap-6 w-full">
@@ -33,16 +38,18 @@ const Card = ({ stores }) => {
                       </a>
                     </div>
                     <div className="">
-                      <h1 className="">{store.discount} %</h1>
+                      <h1 className="">
+                        <span className="font-bold">{store.discount}</span> %
+                      </h1>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
+          </section>
         );
       })}
-    </div>
+    </section>
   );
 };
 

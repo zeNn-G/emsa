@@ -46,8 +46,7 @@ export const data = [
     _type: "stores",
     _updatedAt: "2022-10-02T09:34:14Z",
     address: "asd",
-    description:
-      "testtesttesttest testtesttesttesttesttestte sttesttesttesttesttesttesttes ttesttesttesttesttesttesttest",
+    description: "test",
     discount: 21,
     district: "das",
     imageurl: {
@@ -78,6 +77,26 @@ export const data = [
       },
     },
     name: "Pizza Il Forno",
+  },
+  {
+    _createdAt: "2022-10-02T12:59:10Z",
+    _id: "d2f68971-7078-4106-aa28-1c6a1c7b2bf1",
+    _rev: "mk8yKWZ3j5HcPvFdfpfJxN",
+    _type: "stores",
+    _updatedAt: "2022-10-02T13:01:54Z",
+    address:
+      "https://www.google.com/maps/place/Kajun+Bring+More/@39.9133692,32.8539037,14.5z/data=!4m5!3m4!1s0x0:0x6e37300e2c3b350!8m2!3d39.9167496!4d32.8580475?hl=tr",
+    description: "Test",
+    discount: 30,
+    district: "Bahçelievler",
+    imageurl: {
+      _type: "image",
+      asset: {
+        _ref: "image-70998d856fad9c831947e4371411e2f2d1e6b6fb-180x145-png",
+        _type: "reference",
+      },
+    },
+    name: "Kajun Bring More",
   },
   {
     _createdAt: "2022-10-02T12:59:10Z",
