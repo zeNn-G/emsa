@@ -14,7 +14,7 @@ const Card = ({ stores }) => {
             key={store._id}
           >
             <div
-              className="flex flex-row backdrop-blur-sm ml-3 mr-3 md:ml-5 md:mr-5 shadow-lg rounded-xl shadow-purpleAccent
+              className="flex flex-row backdrop-blur-sm ml-3 mr-3 md:ml-5 md:mr-5 rounded-xl
             max-w-[400px] md:max-w-[550px] 
             max-h-[350px] md:max-h-[250px] "
             >
@@ -35,7 +35,7 @@ const Card = ({ stores }) => {
                 </div>
                 <div className="flex border-t-2 border-purpleAccent">
                   <div className="flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-6 w-full">
-                    <div className="flex w-[70%]  items-center justify-center">
+                    <div className="flex w-[70%] items-center sm:justify-start justify-center">
                       <h1 className="mr-2 text-center flex">
                         {store.district}
                       </h1>
