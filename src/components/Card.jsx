@@ -34,8 +34,8 @@ const Card = ({ stores }) => {
                   </h1>
                 </div>
                 <div className="flex border-t-2 border-purpleAccent">
-                  <div className="flex flex-col sm:flex-row items-center gap-2 sm:gap-6 w-full">
-                    <div className="flex w-[70%]  items-center">
+                  <div className="flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-6 w-full">
+                    <div className="flex w-[70%]  items-center justify-center">
                       <h1 className="mr-2 text-center flex">
                         {store.district}
                       </h1>
@@ -43,7 +43,7 @@ const Card = ({ stores }) => {
                         <MapIcon className="h-6 w-6 text-purpleAccent" />
                         {/* <img src={Mapicon} className="h-[32px] w-[32px]" /> */}
                       </a>
-                      <div className="ml-1 mr-5 cursor-pointer">
+                      <div className="ml-1 mr-1 cursor-pointer">
                         <Link
                           to={`/sozlesmeler/:${store.name}`}
                           state={store.contracturl}
