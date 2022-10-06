@@ -20,7 +20,7 @@ const Card = ({ stores }) => {
             >
               <div className="flex overflow-hidden text-center  md:rounded-none  rounded-sm bg-slate-700 md:rounded-l-xl md:w-[600px]">
                 <img
-                  className="md:w-[300px] w-[228px] h-[200px] md:h[250px] object-cover bg-slate-700"
+                  className="md:w-[300px] w-[228px] h-[155px] md:h[250px] object-cover bg-slate-700"
                   src={urlFor(store.imageurl).url()}
                 />
               </div>
@@ -29,7 +29,7 @@ const Card = ({ stores }) => {
                   <h1 className="border-b-2 p-2 border-purpleAccent text-center font-semibold">
                     {store.name}
                   </h1>
-                  <h1 className="text-xl  text-center mt-2">
+                  <h1 className="md:text-xl  text-center mt-2">
                     {store.description}
                   </h1>
                 </div>
