@@ -14,7 +14,7 @@ const Card = ({ stores }) => {
             key={store._id}
           >
             <div
-              className="flex flex-row backdrop-blur-sm ml-2 mr-2 md:ml-5 md:mr-5 shadow-lg rounded-xl shadow-purpleAccent
+              className="flex flex-row backdrop-blur-sm ml-3 mr-3 md:ml-5 md:mr-5 md:shadow-lg rounded-xl shadow-purpleAccent
             sm:max-w-[240px] md:max-w-[550px] max-w-[500px]
             max-h-[350px] md:max-h-[250px] "
             >
