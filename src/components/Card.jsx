@@ -10,7 +10,7 @@ const Card = ({ stores }) => {
       {stores.map((store) => {
         return (
           <section
-            className="flex-row flex mt-10 justify-center items-center text-white gap-8 font-[Playfair Display]"
+            className="flex-row flex mt-10 justify-center items-center text-white gap-8"
             key={store._id}
           >
             <div
@@ -29,11 +29,11 @@ const Card = ({ stores }) => {
                   <h1 className="border-b-2 p-2 border-purpleAccent text-center font-semibold">
                     {store.name}
                   </h1>
-                  <h1 className="md:text-xl text-sm text-center mt-2">
+                  <h1 className="md:text-xl text-sm text-center mt-2 font-[Roboto]">
                     {store.description}
                   </h1>
                 </div>
-                <div className="flex border-t-2 border-purpleAccent">
+                <div className="flex border-t-2 border-purpleAccent font-[Roboto]">
                   <div className="flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-6 w-full">
                     <div className="flex w-[70%] items-center sm:justify-start justify-center">
                       <h1 className="mr-2 text-center flex">
