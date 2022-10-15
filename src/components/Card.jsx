@@ -26,10 +26,10 @@ const Card = ({ stores }) => {
               </div>
               <div className="flex p-2 flex-col bg-slate-700 rounded-sm md:rounded-r-xl w-full">
                 <div className="md:text-2xl mb-4 flex-[1] md:flex-[3]">
-                  <h1 className="border-b-2 p-2 border-purpleAccent text-center font-semibold">
+                  <h1 className="border-b-2 p-2 border-purpleAccent text-center tracking-wider text-xl md:text-2xl font-medium">
                     {store.name}
                   </h1>
-                  <h1 className="md:text-xl text-sm text-center mt-2 font-[Roboto]">
+                  <h1 className="md:text-xl text-base tracking-wide text-center mt-2 font-[Roboto]">
                     {store.description}
                   </h1>
                 </div>
