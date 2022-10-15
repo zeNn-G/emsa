@@ -5,6 +5,7 @@ import Spinner from "../components/Spinner";
 import Logo from "../assets/EmsaGazi.webp";
 
 import { client } from "../sanityConfig";
+//! Debug With Data
 // import { data } from "../data";
 import { useQuery } from "react-query";
 import { MagnifyingGlassIcon } from "@heroicons/react/24/solid";

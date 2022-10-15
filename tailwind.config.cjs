@@ -9,8 +9,6 @@ module.exports = {
       },
       fontFamily: {
         sans: ['"Playfair Display"', "serif"],
-        sans: ["'Exo '", "sans-serif"],
-        sans: ["'Roboto'", "sans-serif"],
       },
     },
     screens: {
