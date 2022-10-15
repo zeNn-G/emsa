@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 
 const Card = ({ stores }) => {
   return (
-    <section className="flex-wrap absolute flex justify-center text-center align-middle w-[100vw] ">
+    <section className="flex-wrap absolute flex justify-center text-center align-middle w-[100vw] md:w-[98vw] ">
       {stores.map((store) => {
         return (
           <section
