@@ -16,11 +16,11 @@ const Card = ({ stores }) => {
             <div
               className="flex flex-row backdrop-blur-sm ml-3 mr-3 md:ml-5 md:mr-5 rounded-xl
             max-w-[400px] md:max-w-[550px] 
-            max-h-[350px] md:max-h-[250px] "
+            max-h-[350px] md:max-h-[270px] "
             >
               <div className="flex overflow-hidden text-center  md:rounded-none  rounded-sm bg-slate-700 md:rounded-l-xl md:w-[600px]">
                 <img
-                  className="md:w-[300px] w-[350px] h-[200px] md:h[150px]  object-cover bg-slate-700"
+                  className="md:w-[300px] w-[350px] h-[270px] md:h[150px]  object-cover bg-slate-700"
                   src={urlFor(store.imageurl).url()}
                 />
               </div>
