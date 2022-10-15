@@ -12,7 +12,7 @@ const Card = ({ stores }) => {
       {stores.map((store) => {
         return (
           <section
-            className="flex-row flex mt-10 justify-center items-center text-white gap-8 "
+            className="flex-row flex mt-10 justify-center items-center text-white gap-8 font-[Playfair Display]"
             key={store._id}
           >
             <div
@@ -33,7 +33,7 @@ const Card = ({ stores }) => {
                   alt={store.name}
                 />
               </div>
-              <div className="flex p-2 flex-col bg-slate-700 bg-opacity-60 rounded-sm md:rounded-r-xl w-full">
+              <div className="flex p-2 flex-col bg-slate-700 rounded-sm md:rounded-r-xl w-full">
                 <div className="md:text-2xl mb-4 flex-[1] md:flex-[3]">
                   <h1 className="border-b-2 p-2 border-purpleAccent text-center font-semibold">
                     {store.name}

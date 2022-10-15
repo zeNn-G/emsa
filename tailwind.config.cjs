@@ -7,6 +7,11 @@ module.exports = {
         primary: "#1a1a1a",
         purpleAccent: "#a893d6",
       },
+      fontFamily: {
+        sans: ['"Playfair Display"', "serif"],
+        sans: ["'Exo '", "sans-serif"],
+        sans: ["'Roboto'", "sans-serif"],
+      },
     },
     screens: {
       sm: "432px",
