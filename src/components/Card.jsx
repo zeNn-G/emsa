@@ -3,6 +3,8 @@ import React from "react";
 import { urlFor } from "../sanityConfig";
 import { MapIcon, PencilSquareIcon } from "@heroicons/react/24/outline";
 import { Link } from "react-router-dom";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import "react-lazy-load-image-component/src/effects/blur.css";
 
 const Card = ({ stores }) => {
   return (
@@ -19,9 +21,16 @@ const Card = ({ stores }) => {
             max-h-[350px] md:max-h-[270px] "
             >
               <div className="flex overflow-hidden text-center  md:rounded-none  rounded-sm bg-slate-700 md:rounded-l-xl md:w-[600px]">
-                <img
+                {/* <img
                   className="md:w-[300px] w-[350px] h-[270px] md:h[150px]  object-cover bg-slate-700"
                   src={urlFor(store.imageurl).url()}
+                  alt={store.name}
+                /> */}
+                <LazyLoadImage
+                  className="md:w-[300px] w-[350px] h-[270px] md:h[150px]  object-cover bg-slate-700"
+                  src={urlFor(store.imageurl).url()}
+                  effect="blur"
+                  alt={store.name}
                 />
               </div>
               <div className="flex p-2 flex-col bg-slate-700 rounded-sm md:rounded-r-xl w-full">
