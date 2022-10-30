@@ -9,9 +9,12 @@ const Contract = () => {
   const navigate = useNavigate();
 
   return (
-    <div className="bg-primary flex flex-col justify-center items-center w-[100vw] h-[100vh]">
+    <div className="bg-primary flex flex-col justify-center items-center p-2">
       {state ? (
-        <img src={urlFor(state).url()} className="object-cover" />
+        <img
+          src={urlFor(state).url()}
+          className="object-cover w-[900px] mt-[100px] md:mt-0"
+        />
       ) : (
         <h1 className="text-white">Sözleşme Bulunamadı</h1>
       )}
