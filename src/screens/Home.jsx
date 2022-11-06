@@ -16,7 +16,7 @@ const Home = () => {
   const [isFound, setIsFound] = useState(false);
 
   const { isLoading, error, data } = useQuery("stores", () => {
-    const query = '*[_type == "stores"]';
+    const query = '*[_type == "stores"] | order(discount desc)';
 
     return client.fetch(query);
   });
