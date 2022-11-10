@@ -48,14 +48,14 @@ const Card = ({ stores }) => {
                         <MapIcon className="h-6 w-6 text-purpleAccent" />
                         {/* <img src={Mapicon} className="h-[32px] w-[32px]" /> */}
                       </a>
-                      <div className="ml-1 mr-1 cursor-pointer">
+                      {/* <div className="ml-1 mr-1 cursor-pointer">
                         <Link
                           to={`/sozlesmeler/:${store.name}`}
                           state={store.contracturl}
                         >
                           <PencilSquareIcon className="h-6 w-6 text-purpleAccent" />
                         </Link>
-                      </div>
+                      </div> */}
                     </div>
                     <div className="">
                       <h1 className="">
